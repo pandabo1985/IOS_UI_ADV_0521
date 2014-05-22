@@ -34,6 +34,21 @@
     _listArray = [[UIFont familyNames] retain];
     _tableView = [[UITableView alloc] initWithFrame:view.bounds style:UITableViewStylePlain];
     _tableView.dataSource = self;//实现数据源方法。
+    _tableView.rowHeight = 70;
+    UIImageView *backGroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
+    _tableView.backgroundView = backGroundView;
+    [backGroundView release];
+    _tableView.separatorColor = [UIColor purpleColor];
+    _tableView.separatorStyle = UITableViewCellStyleValue1;
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    headView.backgroundColor = [UIColor redColor];
+    _tableView.tableHeaderView = headView;
+    [headView release];
+    
+    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    footView.backgroundColor = [UIColor redColor];
+    _tableView.tableFooterView = footView;
+    [footView release];
     [self.view addSubview:_tableView];
 
     
@@ -59,10 +74,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"indexPaht = %@",indexPath);
     static NSString *cellInentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellInentifier];
     if (cell==nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellInentifier] autorelease];
+//        cell.backgroundColor = [UIColor redColor];
     }
     NSString *fontName =[self.listArray objectAtIndex:indexPath.row];
     cell.textLabel.text = fontName;
