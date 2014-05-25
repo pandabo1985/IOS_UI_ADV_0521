@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
+
 
 @interface RootViewController ()
 
@@ -18,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"UITableView Style";
     }
     return self;
 }
@@ -30,25 +32,28 @@
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     self.view = view;
     [view release];
+  
 //    self.listArray = [UIFont familyNames];
-    _listArray = [[UIFont familyNames] retain];
-    _tableView = [[UITableView alloc] initWithFrame:view.bounds style:UITableViewStylePlain];
+//    _listArray = [[UIFont familyNames] retain];
+    _listArray = [@[@"UITabViewStylePlain",@"UITalbeViewStyleGrouped"]retain];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, kDeviceHeight-20-44)style:UITableViewStyleGrouped];
     _tableView.dataSource = self;//实现数据源方法。
+    _tableView.delegate = self;
     _tableView.rowHeight = 70;
-    UIImageView *backGroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
-    _tableView.backgroundView = backGroundView;
-    [backGroundView release];
-    _tableView.separatorColor = [UIColor purpleColor];
-    _tableView.separatorStyle = UITableViewCellStyleValue1;
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    headView.backgroundColor = [UIColor redColor];
-    _tableView.tableHeaderView = headView;
-    [headView release];
+//    UIImageView *backGroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
+//    _tableView.backgroundView = backGroundView;
+//    [backGroundView release];
+//    _tableView.separatorColor = [UIColor purpleColor];
+//    _tableView.separatorStyle = UITableViewCellStyleValue1;
+//    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+//    headView.backgroundColor = [UIColor redColor];
+//    _tableView.tableHeaderView = headView;
+//    [headView release];
     
-    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    footView.backgroundColor = [UIColor redColor];
-    _tableView.tableFooterView = footView;
-    [footView release];
+//    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+//    footView.backgroundColor = [UIColor redColor];
+//    _tableView.tableFooterView = footView;
+//    [footView release];
     [self.view addSubview:_tableView];
 
     
@@ -66,6 +71,11 @@
 }
 
 #pragma mark -TableView Datasource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_listArray count];
@@ -94,6 +104,16 @@
 
     [super dealloc];
   
+}
+
+#pragma mark -UITableview Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"indexpaht = %@",indexPath);
+    DetailViewController *detailCtrl = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:detailCtrl animated:YES];
+    [detailCtrl release];
+    
 }
 /*
  #pragma mark - Navigation
