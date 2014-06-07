@@ -95,7 +95,13 @@
         cell.data = _listArray[indexPath.row];
         return cell;
     }else{
-        return nil;
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+           
+        }
+      cell.textLabel.text = _listArray[indexPath.row];
+        return cell;
     }
 
     return nil;
