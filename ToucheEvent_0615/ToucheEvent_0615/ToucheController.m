@@ -35,6 +35,22 @@
     
     [toucheView release];
     
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
+    [self.view addGestureRecognizer:singleTap];
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    [self.view addGestureRecognizer:doubleTap];
+    
+    [singleTap requireGestureRecognizerToFail:doubleTap];
+    
+    
+}
+-(void)singleTap:(UITapGestureRecognizer *)tapGesture{
+    NSLog(@"*********单击!**********");
+}
+
+-(void)doubleTap:(UITapGestureRecognizer *)doubleTap{
+    NSLog(@"********双击!**********");
 }
 
 - (void)didReceiveMemoryWarning
