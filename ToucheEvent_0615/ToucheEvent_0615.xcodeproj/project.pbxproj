@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B5EED2E194D86AD0007AE8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED2D194D86AD0007AE8F /* Foundation.framework */; };
+		3B5EED30194D86AD0007AE8F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED2F194D86AD0007AE8F /* CoreGraphics.framework */; };
+		3B5EED32194D86AD0007AE8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED31194D86AD0007AE8F /* UIKit.framework */; };
+		3B5EED38194D86AD0007AE8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B5EED36194D86AD0007AE8F /* InfoPlist.strings */; };
+		3B5EED3A194D86AD0007AE8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED39194D86AD0007AE8F /* main.m */; };
+		3B5EED3E194D86AD0007AE8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED3D194D86AD0007AE8F /* AppDelegate.m */; };
+		3B5EED40194D86AD0007AE8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5EED3F194D86AD0007AE8F /* Images.xcassets */; };
+		3B5EED47194D86AD0007AE8F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED46194D86AD0007AE8F /* XCTest.framework */; };
+		3B5EED48194D86AD0007AE8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED2D194D86AD0007AE8F /* Foundation.framework */; };
+		3B5EED49194D86AD0007AE8F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5EED31194D86AD0007AE8F /* UIKit.framework */; };
+		3B5EED51194D86AD0007AE8F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B5EED4F194D86AD0007AE8F /* InfoPlist.strings */; };
+		3B5EED53194D86AD0007AE8F /* ToucheEvent_0615Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED52194D86AD0007AE8F /* ToucheEvent_0615Tests.m */; };
+		3B5EED5E194D86D30007AE8F /* ToucheView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED5D194D86D30007AE8F /* ToucheView.m */; };
+		3B5EED61194D86E40007AE8F /* ToucheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED60194D86E40007AE8F /* ToucheController.m */; };
+		3B5EED64194D86FE0007AE8F /* ToucheWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EED63194D86FE0007AE8F /* ToucheWindow.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B5EED4A194D86AD0007AE8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B5EED22194D86AD0007AE8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B5EED29194D86AD0007AE8F;
+			remoteInfo = ToucheEvent_0615;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B5EED2A194D86AD0007AE8F /* ToucheEvent_0615.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToucheEvent_0615.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5EED2D194D86AD0007AE8F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B5EED2F194D86AD0007AE8F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B5EED31194D86AD0007AE8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B5EED35194D86AD0007AE8F /* ToucheEvent_0615-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToucheEvent_0615-Info.plist"; sourceTree = "<group>"; };
+		3B5EED37194D86AD0007AE8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B5EED39194D86AD0007AE8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B5EED3B194D86AD0007AE8F /* ToucheEvent_0615-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToucheEvent_0615-Prefix.pch"; sourceTree = "<group>"; };
+		3B5EED3C194D86AD0007AE8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B5EED3D194D86AD0007AE8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B5EED3F194D86AD0007AE8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3B5EED45194D86AD0007AE8F /* ToucheEvent_0615Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToucheEvent_0615Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5EED46194D86AD0007AE8F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3B5EED4E194D86AD0007AE8F /* ToucheEvent_0615Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToucheEvent_0615Tests-Info.plist"; sourceTree = "<group>"; };
+		3B5EED50194D86AD0007AE8F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B5EED52194D86AD0007AE8F /* ToucheEvent_0615Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToucheEvent_0615Tests.m; sourceTree = "<group>"; };
+		3B5EED5C194D86D30007AE8F /* ToucheView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToucheView.h; sourceTree = "<group>"; };
+		3B5EED5D194D86D30007AE8F /* ToucheView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToucheView.m; sourceTree = "<group>"; };
+		3B5EED5F194D86E40007AE8F /* ToucheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToucheController.h; sourceTree = "<group>"; };
+		3B5EED60194D86E40007AE8F /* ToucheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToucheController.m; sourceTree = "<group>"; };
+		3B5EED62194D86FE0007AE8F /* ToucheWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToucheWindow.h; sourceTree = "<group>"; };
+		3B5EED63194D86FE0007AE8F /* ToucheWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToucheWindow.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B5EED27194D86AD0007AE8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED30194D86AD0007AE8F /* CoreGraphics.framework in Frameworks */,
+				3B5EED32194D86AD0007AE8F /* UIKit.framework in Frameworks */,
+				3B5EED2E194D86AD0007AE8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5EED42194D86AD0007AE8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED47194D86AD0007AE8F /* XCTest.framework in Frameworks */,
+				3B5EED49194D86AD0007AE8F /* UIKit.framework in Frameworks */,
+				3B5EED48194D86AD0007AE8F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B5EED21194D86AD0007AE8F = {
+			isa = PBXGroup;
+			children = (
+				3B5EED33194D86AD0007AE8F /* ToucheEvent_0615 */,
+				3B5EED4C194D86AD0007AE8F /* ToucheEvent_0615Tests */,
+				3B5EED2C194D86AD0007AE8F /* Frameworks */,
+				3B5EED2B194D86AD0007AE8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B5EED2B194D86AD0007AE8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED2A194D86AD0007AE8F /* ToucheEvent_0615.app */,
+				3B5EED45194D86AD0007AE8F /* ToucheEvent_0615Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B5EED2C194D86AD0007AE8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED2D194D86AD0007AE8F /* Foundation.framework */,
+				3B5EED2F194D86AD0007AE8F /* CoreGraphics.framework */,
+				3B5EED31194D86AD0007AE8F /* UIKit.framework */,
+				3B5EED46194D86AD0007AE8F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B5EED33194D86AD0007AE8F /* ToucheEvent_0615 */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED3C194D86AD0007AE8F /* AppDelegate.h */,
+				3B5EED3D194D86AD0007AE8F /* AppDelegate.m */,
+				3B5EED62194D86FE0007AE8F /* ToucheWindow.h */,
+				3B5EED63194D86FE0007AE8F /* ToucheWindow.m */,
+				3B5EED5F194D86E40007AE8F /* ToucheController.h */,
+				3B5EED60194D86E40007AE8F /* ToucheController.m */,
+				3B5EED5C194D86D30007AE8F /* ToucheView.h */,
+				3B5EED5D194D86D30007AE8F /* ToucheView.m */,
+				3B5EED3F194D86AD0007AE8F /* Images.xcassets */,
+				3B5EED34194D86AD0007AE8F /* Supporting Files */,
+			);
+			path = ToucheEvent_0615;
+			sourceTree = "<group>";
+		};
+		3B5EED34194D86AD0007AE8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED35194D86AD0007AE8F /* ToucheEvent_0615-Info.plist */,
+				3B5EED36194D86AD0007AE8F /* InfoPlist.strings */,
+				3B5EED39194D86AD0007AE8F /* main.m */,
+				3B5EED3B194D86AD0007AE8F /* ToucheEvent_0615-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B5EED4C194D86AD0007AE8F /* ToucheEvent_0615Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED52194D86AD0007AE8F /* ToucheEvent_0615Tests.m */,
+				3B5EED4D194D86AD0007AE8F /* Supporting Files */,
+			);
+			path = ToucheEvent_0615Tests;
+			sourceTree = "<group>";
+		};
+		3B5EED4D194D86AD0007AE8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B5EED4E194D86AD0007AE8F /* ToucheEvent_0615Tests-Info.plist */,
+				3B5EED4F194D86AD0007AE8F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B5EED29194D86AD0007AE8F /* ToucheEvent_0615 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5EED56194D86AD0007AE8F /* Build configuration list for PBXNativeTarget "ToucheEvent_0615" */;
+			buildPhases = (
+				3B5EED26194D86AD0007AE8F /* Sources */,
+				3B5EED27194D86AD0007AE8F /* Frameworks */,
+				3B5EED28194D86AD0007AE8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToucheEvent_0615;
+			productName = ToucheEvent_0615;
+			productReference = 3B5EED2A194D86AD0007AE8F /* ToucheEvent_0615.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B5EED44194D86AD0007AE8F /* ToucheEvent_0615Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B5EED59194D86AD0007AE8F /* Build configuration list for PBXNativeTarget "ToucheEvent_0615Tests" */;
+			buildPhases = (
+				3B5EED41194D86AD0007AE8F /* Sources */,
+				3B5EED42194D86AD0007AE8F /* Frameworks */,
+				3B5EED43194D86AD0007AE8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B5EED4B194D86AD0007AE8F /* PBXTargetDependency */,
+			);
+			name = ToucheEvent_0615Tests;
+			productName = ToucheEvent_0615Tests;
+			productReference = 3B5EED45194D86AD0007AE8F /* ToucheEvent_0615Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B5EED22194D86AD0007AE8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "pan dabo";
+				TargetAttributes = {
+					3B5EED44194D86AD0007AE8F = {
+						TestTargetID = 3B5EED29194D86AD0007AE8F;
+					};
+				};
+			};
+			buildConfigurationList = 3B5EED25194D86AD0007AE8F /* Build configuration list for PBXProject "ToucheEvent_0615" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B5EED21194D86AD0007AE8F;
+			productRefGroup = 3B5EED2B194D86AD0007AE8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B5EED29194D86AD0007AE8F /* ToucheEvent_0615 */,
+				3B5EED44194D86AD0007AE8F /* ToucheEvent_0615Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B5EED28194D86AD0007AE8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED38194D86AD0007AE8F /* InfoPlist.strings in Resources */,
+				3B5EED40194D86AD0007AE8F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5EED43194D86AD0007AE8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED51194D86AD0007AE8F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B5EED26194D86AD0007AE8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED64194D86FE0007AE8F /* ToucheWindow.m in Sources */,
+				3B5EED5E194D86D30007AE8F /* ToucheView.m in Sources */,
+				3B5EED61194D86E40007AE8F /* ToucheController.m in Sources */,
+				3B5EED3E194D86AD0007AE8F /* AppDelegate.m in Sources */,
+				3B5EED3A194D86AD0007AE8F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B5EED41194D86AD0007AE8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5EED53194D86AD0007AE8F /* ToucheEvent_0615Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B5EED4B194D86AD0007AE8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B5EED29194D86AD0007AE8F /* ToucheEvent_0615 */;
+			targetProxy = 3B5EED4A194D86AD0007AE8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B5EED36194D86AD0007AE8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B5EED37194D86AD0007AE8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B5EED4F194D86AD0007AE8F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B5EED50194D86AD0007AE8F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B5EED54194D86AD0007AE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B5EED55194D86AD0007AE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B5EED57194D86AD0007AE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToucheEvent_0615/ToucheEvent_0615-Prefix.pch";
+				INFOPLIST_FILE = "ToucheEvent_0615/ToucheEvent_0615-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B5EED58194D86AD0007AE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToucheEvent_0615/ToucheEvent_0615-Prefix.pch";
+				INFOPLIST_FILE = "ToucheEvent_0615/ToucheEvent_0615-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3B5EED5A194D86AD0007AE8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToucheEvent_0615.app/ToucheEvent_0615";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToucheEvent_0615/ToucheEvent_0615-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ToucheEvent_0615Tests/ToucheEvent_0615Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3B5EED5B194D86AD0007AE8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToucheEvent_0615.app/ToucheEvent_0615";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ToucheEvent_0615/ToucheEvent_0615-Prefix.pch";
+				INFOPLIST_FILE = "ToucheEvent_0615Tests/ToucheEvent_0615Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B5EED25194D86AD0007AE8F /* Build configuration list for PBXProject "ToucheEvent_0615" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5EED54194D86AD0007AE8F /* Debug */,
+				3B5EED55194D86AD0007AE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B5EED56194D86AD0007AE8F /* Build configuration list for PBXNativeTarget "ToucheEvent_0615" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5EED57194D86AD0007AE8F /* Debug */,
+				3B5EED58194D86AD0007AE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B5EED59194D86AD0007AE8F /* Build configuration list for PBXNativeTarget "ToucheEvent_0615Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B5EED5A194D86AD0007AE8F /* Debug */,
+				3B5EED5B194D86AD0007AE8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B5EED22194D86AD0007AE8F /* Project object */;
+}
