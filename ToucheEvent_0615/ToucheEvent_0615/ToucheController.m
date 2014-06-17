@@ -43,7 +43,9 @@
     
     [singleTap requireGestureRecognizerToFail:doubleTap];
     
+    UISwipeGestureRecognizer *swipGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipAction:)];
     
+    [self.view addGestureRecognizer:swipGesture];
 }
 -(void)singleTap:(UITapGestureRecognizer *)tapGesture{
     NSLog(@"*********单击!**********");
@@ -51,6 +53,10 @@
 
 -(void)doubleTap:(UITapGestureRecognizer *)doubleTap{
     NSLog(@"********双击!**********");
+}
+
+-(void)swipAction:(UISwipeGestureRecognizer *)swip{
+    NSLog(@"*******清扫******");
 }
 
 - (void)didReceiveMemoryWarning
