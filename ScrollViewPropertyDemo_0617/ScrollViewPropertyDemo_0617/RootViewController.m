@@ -26,37 +26,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+   scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor redColor];
-    scrollView.contentSize = CGSizeMake(320*2, 250);
+    scrollView.contentSize = CGSizeMake(320, 460);
 //    scrollView.bounces = NO;
-    scrollView.pagingEnabled = YES;
+//    scrollView.pagingEnabled = YES;
 //    scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
-    [scrollView flashScrollIndicators];
-    scrollView.contentInset = UIEdgeInsetsMake(0, 50, 0, 0);
+//    [scrollView flashScrollIndicators];
+//    scrollView.contentInset = UIEdgeInsetsMake(0, 50, 0, 0);
     scrollView.minimumZoomScale = 0.5;
-    scrollView.bouncesZoom =NO;
+//    scrollView.bouncesZoom =NO;
     scrollView.maximumZoomScale = 2;
     [self.view addSubview:scrollView];
     
-    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 250)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     imageView.image = [UIImage imageNamed:@"1.JPG"];
     [scrollView addSubview:imageView];
     
    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(320, 200, 320, 40)];
-    label.backgroundColor = [UIColor yellowColor];
-    label.text = @"学习scrollview";
-    [scrollView addSubview:label];
-    [label release];
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(320, 200, 320, 40)];
+//    label.backgroundColor = [UIColor yellowColor];
+//    label.text = @"学习scrollview";
+//    [scrollView addSubview:label];
+//    [label release];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setFrame:CGRectMake(320/2-140/2, 350, 140, 40)];
-    button.backgroundColor = [UIColor grayColor];
-    [button addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [button setFrame:CGRectMake(320/2-140/2, 350, 140, 40)];
+//    button.backgroundColor = [UIColor grayColor];
+//    [button addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
 }
 -(void)test{
     [scrollView setContentOffset:CGPointMake(320, 0) animated:YES];
