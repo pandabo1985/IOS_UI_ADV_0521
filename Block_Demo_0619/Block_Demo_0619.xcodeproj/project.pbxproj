@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B55D3FC1954F984005E5C99 /* BlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55D3FB1954F984005E5C99 /* BlockObject.m */; };
+		3B55D3FF1955008E005E5C99 /* BlockBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B55D3FE1955008E005E5C99 /* BlockBtn.m */; };
 		3B680892195321A000D5F622 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B680891195321A000D5F622 /* Foundation.framework */; };
 		3B680894195321A000D5F622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B680893195321A000D5F622 /* CoreGraphics.framework */; };
 		3B680896195321A000D5F622 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B680895195321A000D5F622 /* UIKit.framework */; };
@@ -33,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B55D3FA1954F984005E5C99 /* BlockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockObject.h; sourceTree = "<group>"; };
+		3B55D3FB1954F984005E5C99 /* BlockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockObject.m; sourceTree = "<group>"; };
+		3B55D3FD1955008E005E5C99 /* BlockBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBtn.h; sourceTree = "<group>"; };
+		3B55D3FE1955008E005E5C99 /* BlockBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBtn.m; sourceTree = "<group>"; };
 		3B68088E195321A000D5F622 /* Block_Demo_0619.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Block_Demo_0619.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B680891195321A000D5F622 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B680893195321A000D5F622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,10 @@
 				3B6808A1195321A000D5F622 /* AppDelegate.m */,
 				3B6808C01953298A00D5F622 /* MainViewController.h */,
 				3B6808C11953298A00D5F622 /* MainViewController.m */,
+				3B55D3FD1955008E005E5C99 /* BlockBtn.h */,
+				3B55D3FE1955008E005E5C99 /* BlockBtn.m */,
+				3B55D3FA1954F984005E5C99 /* BlockObject.h */,
+				3B55D3FB1954F984005E5C99 /* BlockObject.m */,
 				3B6808A3195321A000D5F622 /* Images.xcassets */,
 				3B680898195321A000D5F622 /* Supporting Files */,
 			);
@@ -246,6 +256,8 @@
 			files = (
 				3B6808A2195321A000D5F622 /* AppDelegate.m in Sources */,
 				3B6808C21953298A00D5F622 /* MainViewController.m in Sources */,
+				3B55D3FF1955008E005E5C99 /* BlockBtn.m in Sources */,
+				3B55D3FC1954F984005E5C99 /* BlockObject.m in Sources */,
 				3B68089E195321A000D5F622 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +455,7 @@
 				3B6808BC195321A000D5F622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B6808BD195321A000D5F622 /* Build configuration list for PBXNativeTarget "Block_Demo_0619Tests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +464,7 @@
 				3B6808BF195321A000D5F622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

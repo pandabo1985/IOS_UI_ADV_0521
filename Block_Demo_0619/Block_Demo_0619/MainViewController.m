@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "BlockBtn.h"
 
 typedef int(^myBlockNew)(int);
 
@@ -64,8 +65,45 @@ typedef int(^myBlockNew)(int);
     [self testBlockNew:my];
     NSLog(@"number_block = %d",number_block);
     
+    NSObject *object = [[NSObject alloc] init];
+    myBlockNew objectB = ^(int a){
+        NSLog(@"object==%d",object.retainCount);
+        return 100;
+    };
+    [self testBlockNew:objectB];
+    
+    myBlockNew objectC = ^(int a){
+        numberA = 10;
+        NSLog(@"self.retainCount==%d",self.retainCount);
+          NSLog(@"self.view==%d",self.view.retainCount);
+        return 100;
+    };
+    [self testBlockNew:objectC];
+    
+    //===================
+    BlockBtn *blockBtn = [[BlockBtn alloc] initWithFrame:CGRectMake(320/2-160/2, 200, 160, 100)];
+    [blockBtn setTitle:@"blockBtn" forState:UIControlStateNormal];
+    [blockBtn setBackgroundColor:[UIColor redColor]];
+    blockBtn.block = ^(BlockBtn *btn){
+        UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:@"title" message:@"mssage" delegate:self cancelButtonTitle:@"cacel" otherButtonTitles:nil, nil];
+        
+        [alerView show];
+        
+    };
+    
+    [self.view addSubview:blockBtn];
+    [blockBtn release];
+}
+#pragma mark alertDelegate
+- (void)alertViewCancel:(UIAlertView *)alertView{
+    NSLog(@"alertViewCancel");
+    
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"clickedButtonAtIndex = %d",buttonIndex);
+//    [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+}
 -(void)fuck:(int)a
 {
     NSLog(@"fuck a = %d",a);
