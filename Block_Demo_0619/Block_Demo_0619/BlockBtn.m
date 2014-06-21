@@ -23,4 +23,10 @@
 //    self.block(self);
     _block(self);
 }
+
+-(void)dealloc{
+    [super dealloc];
+    [self.block release];
+    
+}
 @end

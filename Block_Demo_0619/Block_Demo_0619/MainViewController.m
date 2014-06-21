@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "BlockBtn.h"
+#import "DetailViewController.h"
 
 typedef int(^myBlockNew)(int);
 
@@ -88,11 +89,40 @@ typedef int(^myBlockNew)(int);
         UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:@"title" message:@"mssage" delegate:self cancelButtonTitle:@"cacel" otherButtonTitles:nil, nil];
         
         [alerView show];
+        [alerView release];
         
     };
     
     [self.view addSubview:blockBtn];
     [blockBtn release];
+    //==========block循环引用，主要看
+    BlockBtn *detail = [[BlockBtn alloc] initWithFrame:CGRectMake(320/2-100/2, 100, 100, 100)];
+    [detail setBackgroundColor:[UIColor blueColor]];
+    [detail setTitle:@"detail" forState:UIControlStateNormal];
+    [detail setBlock:^(BlockBtn *btn){
+        DetailViewController *detailCtrl = [[DetailViewController alloc] init];
+        [self presentModalViewController:detailCtrl animated:YES];
+        
+        [detailCtrl release];
+    }];
+    [self.view addSubview:detail];
+    [detail release];
+    
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(320/2, 50, 50, 50)];
+    backBtn.backgroundColor = [UIColor greenColor];
+    [backBtn setTitle:@"back" forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(toDetail) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backBtn];
+    [backBtn release];
+    
+}
+
+-(void)toDetail{
+    NSLog(@"=============");
+    DetailViewController *detailCtrl = [[DetailViewController alloc] init];
+    [self presentModalViewController:detailCtrl animated:YES];
+    [detailCtrl release];
+    NSLog(@"detailCtrl = %d",[detailCtrl retainCount]);
 }
 #pragma mark alertDelegate
 - (void)alertViewCancel:(UIAlertView *)alertView{
