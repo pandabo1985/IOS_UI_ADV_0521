@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "BlockBtn.h"
 #import "DetailViewController.h"
+#import "UIBlockAlertView.h"
 
 typedef int(^myBlockNew)(int);
 
@@ -114,7 +115,27 @@ typedef int(^myBlockNew)(int);
     [backBtn addTarget:self action:@selector(toDetail) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backBtn];
     [backBtn release];
+    //====自定义UIAlertView
     
+    UIButton *alertBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    alertBtn.frame = CGRectMake(50, 400, 30, 30);
+    [alertBtn addTarget:self action:@selector(altertBtn:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:alertBtn];
+    
+    
+}
+
+-(void)altertBtn:(UIButton *)alertBtn{
+    UIBlockAlertView *blockView = [[UIBlockAlertView alloc] initWithTitle:@"title" message:@"mssage" delegate:nil cancelButtonTitle:@"cancle" otherButtonTitles:@"other" buttonBlock:^(NSInteger index){
+        if (index==0) {
+            NSLog(@"cancle==%d",index);
+        }else if (index == 1){
+            NSLog(@"other = %d",index);
+        }
+    }];
+    [blockView show];
+    [blockView release];
 }
 
 -(void)toDetail{

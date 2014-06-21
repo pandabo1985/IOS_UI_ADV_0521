@@ -17,3 +17,4 @@ typedef void(^TouchBlock) (BlockBtn *);
 @property(nonatomic,copy)TouchBlock block;
 
 @end
+ 
