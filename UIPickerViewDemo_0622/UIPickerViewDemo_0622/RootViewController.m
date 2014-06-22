@@ -38,6 +38,39 @@
 //    NSString *path = [[bundle resourcePath] stringByAppendingPathComponent:@"city.plist"];
     NSString *paht = [bundle pathForResource:@"city" ofType:@"plist"];
     data = [[NSArray alloc] initWithContentsOfFile:paht];
+    
+    //data pickerView
+    UIDatePicker *dataPicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    dataPicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:-60*60*24*365*10];
+    dataPicker.maximumDate = [NSDate date];
+    dataPicker.date = [NSDate dateWithTimeIntervalSinceNow:-60*60*24];
+    [self.view addSubview:dataPicker];
+    [dataPicker release];
+//    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    button.frame = CGRectMake(0, 230, 40, 40);
+//    [button setTitle:@"pick" forState:UIControlStateNormal];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 250, 320, 100)];
+    imageView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:imageView];
+    [imageView release];
+    
+    NSString *imageUrl = @"http://pic.4j4j.cn/upload/pic/20130801/023d1fb693.jpg";
+    NSURL *url = [NSURL URLWithString:imageUrl];
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    UIImage *image = [UIImage imageWithData:imageData];
+    imageView.image = image;
+    
+    NSData *toData = UIImageJPEGRepresentation(image, 1);
+    NSLog(@"toData.length= %d",toData.length);
+    //save pic
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+    
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
+    NSLog(@"%@",error);
 }
 
 #pragma mark -UIPickerView delegate
@@ -76,7 +109,9 @@
     
     UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 220, 40)];
     view2.backgroundColor = [UIColor blueColor];
-    return [view2 autorelease]; 
+    return [view2 autorelease];
+    
+    
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
