@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>{
+@interface RootViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
     NSArray *data;
 }
 

@@ -67,8 +67,42 @@
     //save pic
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.tag = 100;
+    button.backgroundColor = [UIColor grayColor];
+    button.frame = CGRectMake(50, 50,50, 30);
+    [button setTitle:@"访问相册" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickPhotos) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    UIImageView *ivPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
+    ivPhoto.tag = 101;
+    [self.view addSubview:ivPhoto];
+    [ivPhoto release];
+    
+}
+-(void)clickPhotos{
+    UIImagePickerController *imgeCtrl = [[UIImagePickerController alloc] init];
+    imgeCtrl.delegate = self;
+    imgeCtrl.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:imgeCtrl animated:YES completion:^{
+    }];
+    [imgeCtrl release];
 }
 
+#pragma mark UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+   
+    UIImageView *v = (UIImageView *)[self.view viewWithTag:101];
+    v.image = image;
+    
+    NSLog(@"info==%@",info);
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
     NSLog(@"%@",error);
 }
