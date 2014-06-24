@@ -36,7 +36,24 @@
     [popCtrl release];
     _popoverCtrl = [[UIPopoverController alloc] initWithContentViewController:navPopCtrl];
     _popoverCtrl.popoverContentSize = CGSizeMake(320, 600);
+    
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:@"模态试图" style:UIBarButtonItemStyleBordered target:self  action:@selector(clickAction2:)];
+    self.navigationItem.rightBarButtonItem = [rightBar autorelease];
+    
    
+    
+}
+
+-(void)clickAction2:(UIBarButtonItem *)btn{
+    UIViewController *modelCtrl = [[UIViewController alloc] init];
+
+    modelCtrl.title = @"模态窗口";
+    UINavigationController *navModal = [[UINavigationController alloc] initWithRootViewController:modelCtrl];
+    navModal.modalPresentationStyle = UIModalPresentationPageSheet;
+    [modelCtrl release];
+    [self presentViewController:navModal animated:YES completion:^{
+        
+    }];
     
 }
 
