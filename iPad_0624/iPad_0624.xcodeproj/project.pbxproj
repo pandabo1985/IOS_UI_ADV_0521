@@ -21,6 +21,7 @@
 		3B0FAC011959AA8B00090D7C /* iPad_0624Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FAC001959AA8B00090D7C /* iPad_0624Tests.m */; };
 		3B0FAC0F1959AECA00090D7C /* MastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FAC0E1959AECA00090D7C /* MastViewController.m */; };
 		3B0FAC121959AED600090D7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FAC111959AED600090D7C /* DetailViewController.m */; };
+		3B0FAC151959B4B800090D7C /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FAC141959B4B800090D7C /* PopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		3B0FAC0E1959AECA00090D7C /* MastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MastViewController.m; sourceTree = "<group>"; };
 		3B0FAC101959AED600090D7C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3B0FAC111959AED600090D7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3B0FAC131959B4B800090D7C /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		3B0FAC141959B4B800090D7C /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				3B0FAC0E1959AECA00090D7C /* MastViewController.m */,
 				3B0FAC101959AED600090D7C /* DetailViewController.h */,
 				3B0FAC111959AED600090D7C /* DetailViewController.m */,
+				3B0FAC131959B4B800090D7C /* PopViewController.h */,
+				3B0FAC141959B4B800090D7C /* PopViewController.m */,
 				3B0FABED1959AA8B00090D7C /* Images.xcassets */,
 				3B0FABE21959AA8B00090D7C /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0FAC121959AED600090D7C /* DetailViewController.m in Sources */,
+				3B0FAC151959B4B800090D7C /* PopViewController.m in Sources */,
 				3B0FABEC1959AA8B00090D7C /* AppDelegate.m in Sources */,
 				3B0FABE81959AA8B00090D7C /* main.m in Sources */,
 				3B0FAC0F1959AECA00090D7C /* MastViewController.m in Sources */,

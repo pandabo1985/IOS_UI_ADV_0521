@@ -26,6 +26,7 @@
     
     UISplitViewController *splitCtrl = [[UISplitViewController alloc]init];
     splitCtrl.viewControllers = @[navMastCtrl ,navDetailCtrl];
+    splitCtrl.presentsWithGesture = YES;
     splitCtrl.delegate = self;
     self.window.rootViewController = splitCtrl;
     [splitCtrl release];

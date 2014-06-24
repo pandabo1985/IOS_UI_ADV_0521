@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "PopViewController.h"
 
 @interface DetailViewController ()
 
@@ -27,6 +28,24 @@
 {
     [super viewDidLoad];
      self.view.backgroundColor = [UIColor grayColor];
+    UIBarButtonItem *leftBarItem =[[UIBarButtonItem alloc] initWithTitle:@"pop窗口" style:UIBarButtonItemStyleBordered target:self action:@selector(clickAction:)];
+    self.navigationItem.leftBarButtonItem = [leftBarItem autorelease];
+    
+    PopViewController *popCtrl = [[PopViewController alloc] init];
+    UINavigationController *navPopCtrl = [[UINavigationController alloc] initWithRootViewController:popCtrl];
+    [popCtrl release];
+    _popoverCtrl = [[UIPopoverController alloc] initWithContentViewController:navPopCtrl];
+    _popoverCtrl.popoverContentSize = CGSizeMake(320, 600);
+   
+    
+}
+
+-(void)clickAction:(UIBarButtonItem *)btn{
+    if (self.popoverCtrl.popoverVisible) {
+        [self.popoverCtrl dismissPopoverAnimated:YES];
+    }else{
+        [self.popoverCtrl presentPopoverFromBarButtonItem:btn permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  PopViewController.h
 //  iPad_0624
 //
 //  Created by pan dabo on 14-6-24.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
-@property(nonatomic,retain)UIPopoverController *popoverCtrl;
+@interface PopViewController : UIViewController
 
 @end
