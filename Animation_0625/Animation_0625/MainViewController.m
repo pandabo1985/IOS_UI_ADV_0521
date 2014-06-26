@@ -37,6 +37,7 @@
 
 - (void)dealloc {
     [_myView release];
+    [_parentView release];
     [super dealloc];
 }
 - (IBAction)btnAnimation:(UIButton *)sender {
@@ -61,7 +62,9 @@
 //    }];
     self.myView.alpha =1;
     self.myView.transform = CGAffineTransformScale(self.view.transform, 1, 1);
+    
     [UIView animateWithDuration:0.5 animations:^{
+        [UIView setAnimationRepeatCount:10];
              CGRect frame = self.myView.frame;
             frame.origin.y = 400;
              self.myView.frame = frame;
@@ -90,5 +93,27 @@
     frame.origin.y -=200;
     self.myView.frame = frame;
     [UIView commitAnimations];
+}
+- (IBAction)transAction:(UIButton *)sender {
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.parentView cache:YES];
+//    [UIView commitAnimations];
+//block 动画
+    [UIView transitionWithView:self.parentView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        [self.parentView exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+    }completion:NULL];
+    
+//    [self.parentView exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
+    
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationDuration:0.5];
+//    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+//    [UIView commitAnimations];
+//    
+//    UIViewController *uiviewCtrl = [[UIViewController alloc] init];
+//    [self.navigationController pushViewController:uiviewCtrl animated:YES];
+    
+
 }
 @end

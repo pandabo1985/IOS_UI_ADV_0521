@@ -11,5 +11,7 @@
 @interface MainViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UIView *myView;
 - (IBAction)btnAnimation:(UIButton *)sender;
+@property (retain, nonatomic) IBOutlet UIView *parentView;
+- (IBAction)transAction:(UIButton *)sender;
 
 @end

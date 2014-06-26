@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BCBCBF0195C5A6500FA65A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCBCBEF195C5A6500FA65A1 /* MainViewController.xib */; };
 		3BCED2AD195B00C600B1E466 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCED2AC195B00C600B1E466 /* Foundation.framework */; };
 		3BCED2AF195B00C600B1E466 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCED2AE195B00C600B1E466 /* CoreGraphics.framework */; };
 		3BCED2B1195B00C600B1E466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCED2B0195B00C600B1E466 /* UIKit.framework */; };
@@ -20,7 +21,6 @@
 		3BCED2D0195B00C600B1E466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BCED2CE195B00C600B1E466 /* InfoPlist.strings */; };
 		3BCED2D2195B00C600B1E466 /* Animation_0625Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCED2D1195B00C600B1E466 /* Animation_0625Tests.m */; };
 		3BCED2DE195B023900B1E466 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCED2DC195B023900B1E466 /* MainViewController.m */; };
-		3BCED2DF195B023900B1E466 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCED2DD195B023900B1E466 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BCBCBEF195C5A6500FA65A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		3BCED2A9195B00C600B1E466 /* Animation_0625.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation_0625.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCED2AC195B00C600B1E466 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3BCED2AE195B00C600B1E466 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,7 +53,6 @@
 		3BCED2D1195B00C600B1E466 /* Animation_0625Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animation_0625Tests.m; sourceTree = "<group>"; };
 		3BCED2DB195B023900B1E466 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3BCED2DC195B023900B1E466 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		3BCED2DD195B023900B1E466 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				3BCED2BC195B00C600B1E466 /* AppDelegate.m */,
 				3BCED2DB195B023900B1E466 /* MainViewController.h */,
 				3BCED2DC195B023900B1E466 /* MainViewController.m */,
-				3BCED2DD195B023900B1E466 /* MainViewController.xib */,
+				3BCBCBEF195C5A6500FA65A1 /* MainViewController.xib */,
 				3BCED2BE195B00C600B1E466 /* Images.xcassets */,
 				3BCED2B3195B00C600B1E466 /* Supporting Files */,
 			);
@@ -227,8 +227,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCBCBF0195C5A6500FA65A1 /* MainViewController.xib in Resources */,
 				3BCED2B7195B00C600B1E466 /* InfoPlist.strings in Resources */,
-				3BCED2DF195B023900B1E466 /* MainViewController.xib in Resources */,
 				3BCED2BF195B00C600B1E466 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -356,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -447,6 +447,7 @@
 				3BCED2D7195B00C600B1E466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BCED2D8195B00C600B1E466 /* Build configuration list for PBXNativeTarget "Animation_0625Tests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +456,7 @@
 				3BCED2DA195B00C600B1E466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
