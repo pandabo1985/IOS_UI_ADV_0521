@@ -27,8 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSError *error;
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&error];
+    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"第一夫人" ofType:@"mp3"];
     NSURL *url = [NSURL fileURLWithPath:filePath];
+    
     
     audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
      audioPlayer.delegate = self;
