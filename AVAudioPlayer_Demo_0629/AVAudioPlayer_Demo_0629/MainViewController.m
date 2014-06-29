@@ -90,6 +90,9 @@
 
 #pragma mark AVAudioPlayerDelegate
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+  
+    [_myBtn setTitle:@"播放" forState:UIControlStateNormal];
+  
     NSLog(@"播放结束");
 }
 @end
