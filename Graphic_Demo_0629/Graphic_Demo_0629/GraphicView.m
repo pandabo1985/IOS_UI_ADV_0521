@@ -15,6 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor =[UIColor grayColor];
         _subView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];
         _subView.backgroundColor = [UIColor yellowColor];
         [self addSubview:_subView];
