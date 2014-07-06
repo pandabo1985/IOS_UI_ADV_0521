@@ -28,23 +28,23 @@
     [moreBtn addTarget:self action:@selector(loadImage) forControlEvents:UIControlEventTouchUpInside];
     [self.window addSubview:moreBtn];
     
-//    UIScrollView *scrollView = [[UIScrollView alloc] init];
-//    scrollView.frame = CGRectMake(10, 160, 0, 0);
-//    scrollView.tag = 100;
-//    [self.window addSubview:scrollView];
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.frame = CGRectMake(10, 160, 320, 480);
+    scrollView.tag = 100;
+    [self.window addSubview:scrollView];
     
     return YES;
 }
 
 -(void)loadImage{
-//    UIScrollView *scrollView =nil;
+    UIScrollView *scrollView =nil;
     for (int i =0; i < 10; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 160+100*i, 100, 100)];
         [imageView setImageWithURL:[NSURL URLWithString:@"http://img4.duitang.com/uploads/item/201302/23/20130223133315_XY5dC.thumb.600_0.jpeg"]];
-//       scrollView =(UIScrollView *) [self.window viewWithTag:100];
-//        [scrollView addSubview:imageView];
+       scrollView =(UIScrollView *) [self.window viewWithTag:100];
+        [scrollView addSubview:imageView];
 //        scrollView.frame = CGRectMake(10, 160+100*10*num, 100, 100);
-        [self.window addSubview:imageView];
+//        [self.window addSubview:imageView];
         [imageView release];
 
     }
