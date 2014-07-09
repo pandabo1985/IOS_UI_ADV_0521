@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WebImage.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,43 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    WebImage *imageView = [[WebImage alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    NSString *urlStr = @"http://pic26.nipic.com/20121221/7447430_105636426000_2.jpg";
+//    [imageView setImageURL:[NSURL URLWithString:@"http://img4.duitang.com/uploads/item/201302/23/20130223133315_XY5dC.thumb.600_0.jpeg"]];
+        [imageView setImageURL:[NSURL URLWithString:urlStr]];
+    [self.window addSubview:imageView];
+    [imageView release];
+    
+    UIButton *moreBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [moreBtn setTitle:@"more image" forState:UIControlStateNormal];
+    moreBtn.frame = CGRectMake(10, 110, 100, 50);
+    [moreBtn addTarget:self action:@selector(loadImage) forControlEvents:UIControlEventTouchUpInside];
+    [self.window addSubview:moreBtn];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.frame = CGRectMake(10, 160, 320, 480);
+    scrollView.tag = 100;
+    [self.window addSubview:scrollView];
+    
     return YES;
+}
+
+
+-(void)loadImage{
+    UIScrollView *scrollView =nil;
+    for (int i =0; i < 10; i++) {
+        WebImage *imageView = [[WebImage alloc] initWithFrame:CGRectMake(10, 160+100*i, 100, 100)];
+        NSString *urlStr = @"http://pic26.nipic.com/20121221/7447430_105636426000_2.jpg";
+        //    [imageView setImageURL:[NSURL URLWithString:@"http://img4.duitang.com/uploads/item/201302/23/20130223133315_XY5dC.thumb.600_0.jpeg"]];
+        [imageView setImageURL:[NSURL URLWithString:urlStr]];
+        scrollView =(UIScrollView *) [self.window viewWithTag:100];
+        [scrollView addSubview:imageView];
+        //        scrollView.frame = CGRectMake(10, 160+100*10*num, 100, 100);
+        //        [self.window addSubview:imageView];
+        [imageView release];
+        
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
